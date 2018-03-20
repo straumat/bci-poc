@@ -1,4 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-/data/*
 /.idea/
 /bci-poc.iml
+/data/bitcoind/

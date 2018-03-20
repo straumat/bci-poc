@@ -1,14 +1,13 @@
 version: '2'
 services:
   # ====================================================================================================================
-  # Blockchain2graph.
-  blockchain2graph:
-    image: straumat/blockchain2graph:2.1-SNAPSHOT
+  neo4j:
+    image: neo4j:3.3.3
     volumes:
-      - /opt/tmp:/var/lib/neo4j/data
+      - ./data/neo4j:/var/lib/neo4j/data
     ports:
       - 7474:7474
       - 7687:7687
-      - 8080:8080
+    environment:
+      - NEO4J_AUTH=neo4j/neo4j123
   # ====================================================================================================================
-  # bci-ai-runner.
