@@ -17,9 +17,10 @@ services:
       -rpcallowip=::/0
   # ====================================================================================================================
   neo4j:
-    image: neo4j:3.3.3
-    volumes:
-      - ./data/neo4j:/var/lib/neo4j/data
+    image: straumat/bci-neo4j-docker-with-data:1.0
+    # If you want persistent data, uncomment those lines to map your local folder.
+    #volumes:
+      #- ./data/neo4j:/var/lib/neo4j/data
     ports:
       - 7474:7474
       - 7687:7687
