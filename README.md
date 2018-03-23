@@ -6,6 +6,8 @@
 
 ## How to run it ?
 
+Download the code at [https://github.com/straumat/bci-poc](https://github.com/straumat/bci-poc). The easiest way to do it is to use git command : `git clone https://github.com/straumat/bci-poc.git̀`.
+
 The first step is to start the environment and you have three choices : 
   * Test with our provided data set (100 000 blocks imported) : run `docker-compose up -d`.
   * Test while continuing to import blocks from our public bitcoind server : run `docker-compose -f docker-compose-with-b2g-and-public-bitcoind.yml up -d`.
@@ -24,17 +26,31 @@ The second step is to select or create the use case you want to run :
   * Use case 6 : IF a payment is made to this distributor located in France THEN the country of the owner is France (25% sure).
   * Use case 7 : IF a known enterprise make payment between 1 000<80> & 4 000 <80> every month to an address THEN the owner is probably (80%) working for this company.
 
-To run a case, the source must be in the `src` folder and you just have to run : `docker  run -it -v /opt/workspace/bci-ai-runner/src:/src -e $SRC_FILE="hello.cc" bci-ai-runner`
+To run a case, the source must be in the `src` folder and you just have to run : `docker run -it -v /opt/workspace/bci-poc/src:/src -e SRC_FILE="helloWorld/hello.cc" straumat/bci-ai-runner:1.0`
 
 You can then see the result of the execution by connection to neo4j console :
-  * Use case 1 : CYPHER_QUERY
-  * Use case 2 : CYPHER_QUERY
-  * Use case 3 : CYPHER_QUERY
-  * Use case 4 : CYPHER_QUERY
-  * Use case 5 : CYPHER_QUERY
-  * Use case 6 : CYPHER_QUERY
-  * Use case 7 : CYPHER_QUERY
-  
+  * Use case 1.
+    * Run it : 
+    * View results : 
+  * Use case 2.
+    * Run it : 
+    * View results : 
+  * Use case 3.
+    * Run it : 
+    * View results : 
+  * Use case 4.
+    * Run it : 
+    * View results : 
+  * Use case 5.
+    * Run it : 
+    * View results : 
+  * Use case 6.
+    * Run it : 
+    * View results : 
+  * Use case 7.
+    * Run it : 
+    * View results : 
+
 You can also create your own rule in the `src` folder and execute them.
 
 ## Containers description.
