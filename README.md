@@ -9,12 +9,12 @@ You can read a complete description of our product and our POC on our website : 
 ## How to run it ?
 First, you need to install git and docker. On Ubuntu/Debian, just run this command `sudo apt-get install docker.io docker-compose git`.
 
-Download the code at [https://github.com/straumat/bci-poc](https://github.com/straumat/bci-poc) or retrieve it using this git command : `git clone https://github.com/straumat/bci-poc.git̀`.
+Download the code at [https://github.com/straumat/bci-poc](https://github.com/straumat/bci-poc) or retrieve it using this git command : `git clone https://github.com/straumat/bci-poc.git`.
 
 The first step is to start the environment and you have three choices : 
-  * Test with our provided data set (70 000 blocks imported) : run `sudo docker-compose up -d`.
-  * Test while continuing to import blocks from our public bitcoin core server : run `sudo docker-compose -f docker-compose-with-b2g-and-public-bitcoind.yml up -d`.
-  * Test while continuing to import blocks from your private bitcoin core server : run `sudo docker-compose -f docker-compose-with-b2g-and-private-bitcoind.yml up -d`.
+  * Test with our provided data set (70 000 blocks imported) : run `sudo docker-compose up`.
+  * Test while continuing to import blocks from our public bitcoin core server : run `sudo docker-compose -f docker-compose-with-b2g-and-public-bitcoind.yml up`.
+  * Test while continuing to import blocks from your private bitcoin core server : run `sudo docker-compose -f docker-compose-with-b2g-and-private-bitcoind.yml up`.
 
 _The first choice starts only one container (neo4j), the second choice starts two containers (neo4j & blockchain2graph) and the third choice starts three containers (neo4j, blockchain2graph & bitcoind)._
 
